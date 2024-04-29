@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }else{
             html.removeAttribute("dark");
             localStorage.removeItem('dark-mode');
-            document.querySelector(".img").src="moon-icon.png";
+            document.querySelector(".img").src="moon-icon-coder.png";
         }
     });
 })
