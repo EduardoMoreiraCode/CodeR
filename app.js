@@ -23,3 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })
+
+
+
+function loading() {
+
+    // O código desejado é apenas isto:
+    document.querySelector(".body").style.opacity = 0;
+    document.querySelector(".body").style.display ="none";
+    document.querySelector("header").style.opacity = 1;
+    document.querySelector("nav").style.opacity = 1;
+    document.querySelector("nav").style.display = "block";
+
+}
