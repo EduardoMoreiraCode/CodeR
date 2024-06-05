@@ -51,6 +51,7 @@ code
     font-family: 'Courier New', Courier, monospace;
     background-color: #D9D9D9;
     padding: 0 2px;
+    word-wrap: break-word;
 }
 
 @media (min-width:640px)
