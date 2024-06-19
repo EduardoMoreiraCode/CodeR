@@ -55,9 +55,65 @@ code
     word-wrap: break-word;
 }
 
+
+.readonly-textarea {
+    width:260px;
+    height:146px;  
+    resize: none; /* Impede que o usuário redimensione o textarea */
+    overflow: auto; /* Adiciona barras de rolagem, se necessário */
+    white-space: pre; /* Preserva espaços em branco e adiciona barra de rolagem horizontal */
+    outline: none;
+}
+
+.copyBtn
+{
+    width: 260px;
+    color: #D9D9D9;
+    background-color: #202020;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.copyIcon
+{
+    filter: invert(1);
+}
+
+.output
+{
+    margin: 0 auto;
+    width: 260px;
+    height: 146px;
+    background-color: #FFF;
+    border-radius: 5px;
+    overflow: auto;
+}
+
 @media (min-width:640px)
 {
     iframe
+    {
+        width: 600px;
+        height: 337px;
+    }
+
+    .readonly-textarea
+    {
+        width: 600px;
+        height: 337px;
+    }
+
+    .copyBtn
+    {
+        width: 400px;
+    }
+
+    .output
     {
         width: 600px;
         height: 337px;
@@ -96,4 +152,25 @@ html[dark] .linkGo
 html[dark] summary
 {
     color: #fff;
+}
+
+html[dark] .copyBtn
+{
+    background-color: #D9D9D9;
+    color: #000;
+}
+
+html[dark] .copyIcon
+{
+    filter: invert(0);
+}
+
+html[dark] .titleMod
+{
+    color: #fff;
+}
+
+html[dark] .output
+{
+    background-color: #D9D9D9;
 }
