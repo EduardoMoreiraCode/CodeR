@@ -63,6 +63,7 @@ code
     overflow: auto; /* Adiciona barras de rolagem, se necessário */
     white-space: pre; /* Preserva espaços em branco e adiciona barra de rolagem horizontal */
     outline: none;
+    background-color: #FFF;
 }
 
 .copyBtn
