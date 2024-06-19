@@ -24,15 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+function copyToClipBoard()
+{
+    var right = "copiado com sucesso!"
+    var wrong = "Algo deu errado durante a cópia!"
+    var content = document.getElementById('fixed-text').innerHTML;
 
+    navigator.clipboard.writeText(content)
+    .then(() => {
+        window.alert("Código " + right);
+    })
 
-function loading() {
-
-    // O código desejado é apenas isto:
-    document.querySelector(".body").style.opacity = 0;
-    document.querySelector(".body").style.display ="none";
-    document.querySelector("header").style.opacity = 1;
-    document.querySelector("nav").style.opacity = 1;
-    document.querySelector("nav").style.display = "block";
-
+    .catch(err => {
+        window.alert(wrong, err);
+    })
 }
