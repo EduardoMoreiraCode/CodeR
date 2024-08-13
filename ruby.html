@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="r.css">
+    <!-- <link rel="stylesheet" href="load.css"> -->
+    <link href="r-course.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="r-course.png" rel="apple-touch-icon" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!--Biblioteca javascript-->
+    <title>Linguagem Ruby - CodeR's</title>
+</head>
+
+<body>
+    <header>
+        <span class="invisible">
+            <a href="https://codercurso.vercel.app"><img src="R-lang-icon.png" alt="CodeR"></a>
+        </span>
+        <h1 class="text-header">Code<span class="R-text">R</span></h1>
+        <div class="botao">
+            <label class="label" for="input-dark-mode">
+                <img alt="night mode" class="img" src="moon-icon-coder.png">
+            </label>
+            <input type="checkbox" value="moon-icon.png" id="input-dark-mode">
+        </div>
+    </header>
+    <br>
+    <nav>
+        <h1 class="intro">Introdução ao Ruby</h1>
+        <p class="introText">R é uma linguagem de programação e um ambiente de software livre voltado para estatística,
+            análise de dados e gráficos. Foi criada por Ross Ihaka e Robert Gentleman na Universidade de Auckland, Nova
+            Zelândia, e teve seu lançamento inicial em 1995. A origem do R está fortemente ligada ao desejo de criar uma
+            ferramenta para análises estatísticas que fosse gratuita e aberta, em contraste com as opções comerciais
+            disponíveis na época, como o S-PLUS.</p><br>
+        <p class="introText"><strong>Vantagens do R</strong></p>
+        <ul class="introText">
+            <li>Ampla gama de pacotes: R possui uma extensa biblioteca de pacotes para diversas análises estatísticas,
+                aprendizado de máquina, visualização de dados e muito mais.</li>
+            <li>Visualização de dados: Ferramentas como ggplot2 permitem a criação de gráficos sofisticados e
+                customizáveis.</li>
+            <li>Comunidade ativa: A grande comunidade de usuários contribui com pacotes, tutoriais e suporte,
+                facilitando o aprendizado e a resolução de problemas.</li>
+            <li>Integração: R pode ser integrado com outras linguagens de programação, como Python e C++, e com
+                ferramentas de big data, como Hadoop e Spark.</li>
+            <li>Flexibilidade: Adequado tanto para análise de dados rápida quanto para desenvolvimento de aplicações
+                mais complexas.</li>
+        </ul><br>
+        <p class="introText"><strong>Desvantagens do R</strong></p>
+        <ul class="introText">
+            <li>Curva de aprendizado: Para iniciantes, a curva de aprendizado pode ser íngreme, especialmente para
+                aqueles sem experiência em programação.</li>
+            <li>Desempenho: Para operações em grande escala, R pode ser mais lento que outras linguagens, como Python ou
+                Julia, devido à sua natureza de execução interpretada.</li>
+            <li>Gerenciamento de memória: R pode consumir muita memória, o que pode ser um problema ao trabalhar com
+                grandes conjuntos de dados.</li>
+        </ul><br>
+        <p class="introText"><strong>Aplicações do R</strong></p>
+        <p class="introText">R é amplamente utilizado em estatística, econometria, bioinformática, epidemiologia,
+            sociologia e em áreas que requerem análise de dados complexos e modelagem estatística. Ele é ideal para:</p>
+        <ul class="introText">
+            <li>Análise estatística avançada</li>
+            <li>Mineração de dados</li>
+            <li>Modelagem preditiva</li>
+            <li>Testes de hipóteses</li>
+            <li>Visualização de dados</li>
+        </ul><br>
+        <p class="introText">Devido à sua flexibilidade e poder analítico, R é uma escolha popular entre acadêmicos,
+            cientistas de dados e analistas em várias indústrias.</p>
+        <br>
+        <p class="introText">Duvidas? Então assista ao vídeo do Módulo 1 no link
+            <a class="linkGo" href="#modulos">Módulo 1</a>
+            abaixo do conteúdo:
+            <br> <br>
+        <h1 class="intro">Estruturas de Dados em R</h1>
+        <p class="introText">R oferece diversas estruturas de dados que são fundamentais para a análise e manipulação de
+            dados. As principais são:</p>
+        <ul class="introText">
+            <li><strong>Vetores:</strong> Coleções de elementos do mesmo tipo. São criados usando a função
+                <code>c()</code>.</li>
+            <li><strong>Matrizes:</strong> Estruturas bidimensionais onde todos os elementos são do mesmo tipo. São
+                criadas usando a função <code>matrix()</code>.</li>
+            <li><strong>Listas:</strong> Coleções de elementos de diferentes tipos. São criadas usando a função
+                <code>list()</code>.</li>
+            <li><strong>Data Frames:</strong> Estruturas bidimensionais onde cada coluna pode conter diferentes tipos de
+                dados. São criados usando a função <code>data.frame()</code>.</li>
+        </ul>
+        <p class="introText">Essas estruturas são essenciais para manipulação de dados em R e são amplamente utilizadas
+            em análises estatísticas e na criação de modelos.</p>
+        <br> <br>
+        <h1 class="intro">Primeiro Programa Básico em R</h1>
+        <p class="introText">Aqui está um exemplo de um primeiro programa básico em R, que demonstra a criação de um
+            vetor, a realização de operações simples e a plotagem de um gráfico:</p>
+        <pre class="introText"><code># Criar um vetor de números de 1 a 10
+meu_vetor &lt;- 1:10
+
+# Calcular a soma dos elementos do vetor
+soma &lt;- sum(meu_vetor)
+
+# Exibir a soma no console
+print(paste("A soma dos elementos do vetor é:", soma))
+
+# Plotar um gráfico dos números
+plot(meu_vetor, type="o", col="blue", xlab="Índice", ylab="Valor", main="Gráfico do Vetor")
+</code></pre>
+        <p class="introText">Este programa cria um vetor de números de 1 a 10, calcula a soma dos elementos do vetor,
+            imprime a soma no console e plota um gráfico simples desses números.</p>
+        <br>
+        <p class="introText">Duvidas? Então assista ao vídeo do Módulo 2 no link
+            <a class="linkGo" href="#modulos">Módulo 2</a>
+            abaixo do conteúdo:
+            <br><br>
+        <h1 class="intro">Projeto: Aplicativo de Cálculo de Despesas em R</h1>
+        <p class="introText">Abaixo, no módulo 3 se encontra o código e a saída em tempo real de um projeto feito em R.
+            <br>O funcionamento consiste na inserção manual ou randômica (simulações) de valores que indicam as despesas
+            dentre 3 categorias de cada mês do ano, logo após, é feita uma média dos valores e a mesma é disponibilizada
+            em dois gráficos diferentes. <br><strong>OBS: A instalação de bibliotecas externas não é necessária, visto
+                que o código foi feito com funções nativas da linguagem R.</strong></p>
+        <br>
+        <p class="introText">Para eventuais consultas acesse o <a class="linkGo" href="#modulos">Módulo 3</a>, teste a
+            aplicação e copie o código.</p>
+        <div class="cursos">
+            <h2 class="cursoText" id="modulos">MÓDULOS</h2>
+            <br>
+            <div class="etapa1">
+                <details>
+                    <summary> Módulo 1</summary>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/s6zoLQJji5A?si=IKMpjB5AE7egw60H"
+                            title="Módulo 1: Instalação e Configuração R e R Studio" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                </details>
+                <details>
+                    <summary> Módulo 2</summary>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/ZYmBxtDbL3o?si=jz5GT4mN6_E1U-ki"
+                            title="Módulo 2: Estruturas de Dados em R" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </details>
+                <details>
+                    <summary> Módulo 3</summary>
+                    <div class="iframe-container">
+                        <h3 class="titleMod">Código:</h3>
+
+                        <textarea id="fixed-text" class="readonly-textarea" readonly>
+# Autor: Eduardo Moreira dos Santos Delfino - 3C
+# funcao de pegar despesas
+coletar_despesas &lt;- function(num_meses, manual = TRUE) {
+  meses &lt;- if (num_meses == 6) {
+    c("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho")
+  } else {
+    c("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+      "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+  }
+  
+  categorias &lt;- c("Alimentacao", "Transporte", "Entretenimento")
+  despesas &lt;- matrix(0, nrow = num_meses, ncol = 3, dimnames = list(meses, categorias))
+  
+  if (manual) {
+    for (i in 1:num_meses) {
+      cat("Insira as despesas para o mês de", meses[i], "\n")
+      for (j in 1:3) {
+        repeat {
+          valor &lt;- readline(prompt = paste(categorias[j], ": "))
+          if (suppressWarnings(!is.na(as.numeric(valor)))) {
+            despesas[i, j] &lt;- as.numeric(valor)
+            break
+          } else {
+            cat("Por favor, insira um valor numérico válido para", categorias[j], "\n")
+          }
+        }
+      }
+    }
+  } else {
+    # Gerar randomico 1 - 100
+    despesas &lt;- matrix(sample(1:100, num_meses * 3, replace = TRUE), nrow = num_meses, ncol = 3, dimnames = list(meses, categorias))
+  }
+  
+  return(despesas)
+}
+
+# escolher 6 ou 12 meses
+num_meses &lt;- as.numeric(readline(prompt = "Você deseja calcular a média para 6 ou 12 meses? "))
+
+# consistencia
+if (!num_meses %in% c(6, 12)) {
+  stop("Por favor, insira 6 ou 12.")
+}
+
+# manual ou auto insert
+resposta &lt;- readline(prompt = "Deseja inserir os valores manualmente? (S/N): ")
+manual &lt;- tolower(substr(resposta, 1, 1)) == "s"
+
+# coleta despesa
+despesas &lt;- coletar_despesas(num_meses, manual)
+
+# faz media de 6 ou 12 meses
+medias &lt;- colMeans(despesas)
+cat("Médias das despesas:\n")
+print(medias)
+
+# grafico de barras
+barplot(t(despesas), beside = TRUE, col = c("blue", "green", "red"), 
+        main = paste("Despesas Mensais por Categoria (", num_meses, " meses)", sep=""),
+        xlab = "Mês", ylab = "Valor (R$)")
+
+# legenda/indice
+legend("top", inset = c(0, -0.15), legend = colnames(despesas), fill = c("blue", "green", "red"), 
+       xpd = TRUE, horiz = TRUE, title = "Categorias")
+
+# grafico de linha
+matplot(despesas, type = "o", pch = 1, col = 1:3, 
+        main = paste("Evolução das Despesas Mensais (", num_meses, " meses)", sep=""),
+        xlab = "Mês", ylab = "Valor (R$)", xaxt = "n")
+axis(1, at = 1:num_meses, labels = rownames(despesas))
+
+# legenda/indice
+legend("top", inset = c(0, -0.15), legend = colnames(despesas), col = 1:3, pch = 1, 
+       xpd = TRUE, horiz = TRUE, title = "Categorias")
+
+
+                        </textarea>
+                        <br>
+                        <button class="copyBtn" id="copyBtn" onclick="copyToClipBoard()">Copiar para a Área de
+                            Transferência <img class="copyIcon" src="copy-icon.png" height="18px" width="18px"></button>
+                        <br><br>
+                        <h3 class="titleMod">Output:</h3>
+                        <div class="output">
+                            <h1>Despesas Mensais</h1>
+
+                            <label for="num_meses">Escolha o período (6 ou 12 meses):</label>
+                            <select id="num_meses">
+                                <option value="6">6 meses</option>
+                                <option value="12">12 meses</option>
+                            </select>
+
+                            <label for="manual">Deseja inserir os valores manualmente? (S/N):</label>
+                            <input type="text" id="manual" maxlength="1" autocomplete="off">
+
+                            <button onclick="coletarDespesas()">Coletar Despesas</button>
+
+                            <div id="inputArea"></div>
+                            <button id="calcularButton" style="display:none;" onclick="calcularMedias()">Calcular
+                                Médias</button>
+
+                            <h2>Médias das Despesas:</h2>
+                            <pre id="mediasOutput"></pre>
+
+                            <h2>Gráfico de Barras</h2>
+                            <canvas id="barChart"></canvas>
+
+                            <h2>Gráfico de Linhas</h2>
+                            <canvas id="lineChart"></canvas>
+
+                            <script>
+                                let despesas = [];
+                                let barChart, lineChart;
+                                const categorias = ["Alimentação", "Transporte", "Entretenimento"];
+                                const meses6 = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"];
+                                const meses12 = [...meses6, "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+                                function coletarDespesas() {
+                                    const numMeses = parseInt(document.getElementById('num_meses').value);
+                                    const manual = document.getElementById('manual').value.toLowerCase() === 's';
+                                    const inputArea = document.getElementById('inputArea');
+                                    inputArea.innerHTML = '';
+
+                                    if (manual) {
+                                        for (let i = 0; i < numMeses; i++) {
+                                            const mesDiv = document.createElement('div');
+                                            mesDiv.innerHTML = `<h3>${numMeses === 6 ? meses6[i] : meses12[i]}</h3>`;
+                                            categorias.forEach(categoria => {
+                                                mesDiv.innerHTML += `<label for="mes${i}_${categoria}">${categoria}:</label>
+                                                                     <input type="number" id="mes${i}_${categoria}" value="0"><br>`;
+                                            });
+                                            inputArea.appendChild(mesDiv);
+                                        }
+                                        document.getElementById('calcularButton').style.display = 'block';
+                                    } else {
+                                        despesas = Array.from({ length: numMeses }, () => categorias.map(() => Math.floor(Math.random() * 100) + 1));
+                                        document.getElementById('calcularButton').style.display = 'none';
+                                        calcularMedias(); // Automatically calculate and display the data
+                                    }
+                                }
+
+                                function calcularMedias() {
+                                    const numMeses = parseInt(document.getElementById('num_meses').value);
+                                    if (document.getElementById('manual').value.toLowerCase() === 's') {
+                                        despesas = [];
+                                        for (let i = 0; i < numMeses; i++) {
+                                            const mesDespesas = categorias.map(categoria => parseFloat(document.getElementById(`mes${i}_${categoria}`).value));
+                                            despesas.push(mesDespesas);
+                                        }
+                                    }
+
+                                    const medias = categorias.map((_, j) => despesas.reduce((sum, mes) => sum + mes[j], 0) / numMeses);
+                                    document.getElementById('mediasOutput').textContent = `Alimentação: ${medias[0].toFixed(2)}\nTransporte: ${medias[1].toFixed(2)}\nEntretenimento: ${medias[2].toFixed(2)}`;
+
+                                    desenharGraficos(numMeses);
+                                }
+
+                                function desenharGraficos(numMeses) {
+                                    const labels = numMeses === 6 ? meses6 : meses12;
+                                    const data = {
+                                        labels,
+                                        datasets: categorias.map((categoria, i) => ({
+                                            label: categoria,
+                                            data: despesas.map(mes => mes[i]),
+                                            backgroundColor: ['rgba(0, 0, 255, 0.2)', 'rgba(0, 255, 0, 0.2)', 'rgba(255, 0, 0, 0.2)'][i],
+                                            borderColor: ['rgba(0, 0, 255, 1)', 'rgba(0, 255, 0, 1)', 'rgba(255, 0, 0, 1)'][i],
+                                            borderWidth: 1
+                                        }))
+                                    };
+
+                                    if (barChart) barChart.destroy();
+                                    if (lineChart) lineChart.destroy();
+
+                                    barChart = new Chart(document.getElementById('barChart'), {
+                                        type: 'bar',
+                                        data,
+                                        options: {
+                                            scales: {
+                                                y: { beginAtZero: true }
+                                            }
+                                        }
+                                    });
+
+                                    lineChart = new Chart(document.getElementById('lineChart'), {
+                                        type: 'line',
+                                        data,
+                                        options: {
+                                            scales: {
+                                                y: { beginAtZero: true }
+                                            }
+                                        }
+                                    });
+                                }
+                            </script>
+
+                        </div>
+                        <br>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
