@@ -9,12 +9,12 @@
     "icons": [
       {
         "src": "codercurso-icon.png",
-        "sizes": "192x211",
+        "sizes": "192x192",
         "type": "image/png"
       },
       {
         "src": "codercurso-icon.png",
-        "sizes": "512x563",
+        "sizes": "512x512",
         "type": "image/png"
       }
     ]
