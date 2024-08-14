@@ -1,19 +1,19 @@
 {
-    "name": "CodeR - Do zero ao R",
+    "name": "CodeR - Do zero aos R's",
     "short_name": "CodeR",
-    "description": "CodeR - Do zero ao R",
+    "description": "CodeR - Do zero aos R's",
     "start_url": "./",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
     "icons": [
       {
-        "src": "r-course.png",
+        "src": "codercurso-icon.png",
         "sizes": "192x211",
         "type": "image/png"
       },
       {
-        "src": "r-course.png",
+        "src": "codercurso-icon.png",
         "sizes": "512x563",
         "type": "image/png"
       }
